@@ -10,10 +10,10 @@ public class Activity_21 {
         int a = scanner.nextInt();
         System.out.print("Enter value of b: ");
         int b = scanner.nextInt();
-        System.out.println("Result of a+b =: " + (a+b));
-        System.out.println("Result of a-b =: " + (a-b));
-        System.out.println("Result of a*b =: " + (a*b));
-        System.out.println("Result of a/b =: " + (a/b));
-        System.out.println("Result of a%+b =: " + (a%b));
+        System.out.println("Result of " +a+ "+" +b+ "=: " + (a+b));
+        System.out.println("Result of " +a+ "-" +b+ "=: " + (a-b));
+        System.out.println("Result of " +a+ "*" +b+ "=: " + (a*b));
+        System.out.println("Result of " +a+ "/" +b+ "=: " + (a/b));
+        System.out.println("Result of " +a+ "%" +b+ "=: " + (a%b));
     }
 }
