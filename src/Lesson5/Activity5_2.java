@@ -1,5 +1,8 @@
+
 package Lesson5;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Activity5_2 {
@@ -17,7 +20,7 @@ public class Activity5_2 {
             System.out.print("Enter value of index " + i + " : ");
             myArray[i] = scanner.nextInt();
         }
-
+        Arrays.sort(myArray);
         for (int i = 0; i < len - 1; i++) {
             if (myArray[i] != myArray[i + 1]) {
                 result[j++] = myArray[i];
