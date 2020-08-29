@@ -2,13 +2,15 @@ package Lesson6.Activity6_2.Student;
 
 public class Student {
     private  String name;
-    private float gpa;
+    public float gpa;
 
+    //creat contrustor
     public Student(String name, float gpa) {
         this.name = name;
         this.gpa = gpa;
     }
 
+    //creat setter and getter
     public String getName() {
         return name;
     }
@@ -23,5 +25,20 @@ public class Student {
 
     public void setGpa(float gpa) {
         this.gpa = gpa;
+    }
+
+
+
+    public boolean checkPassFail(){
+        if (gpa>=1.5){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    public void GetInfo(){
+        System.out.println("Ten SV: " + getName());
+        System.out.println("GPA: " + getGpa());
     }
 }
