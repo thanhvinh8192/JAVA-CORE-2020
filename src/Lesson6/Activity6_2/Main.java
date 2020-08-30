@@ -13,7 +13,9 @@ public class Main {
         StudentManagement studentManagement = new StudentManagement(n);
         System.out.println("Tong so SV Do: " + studentManagement.countDo());
         System.out.println("Tong so SV Truot: " + studentManagement.countRot());
-        System.out.println("Diem GPA cao nhat: " + studentManagement.timMax());
+        System.out.println("SV co diem GPA cao nhat: " + studentManagement.timMax());
+        System.out.println("SV co diem GPA thap nhat: " + studentManagement.timMin());
+
 
     }
 }
