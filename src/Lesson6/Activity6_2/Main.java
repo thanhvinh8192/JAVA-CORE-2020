@@ -16,6 +16,5 @@ public class Main {
         System.out.println("SV co diem GPA cao nhat: " + studentManagement.timMax());
         System.out.println("SV co diem GPA thap nhat: " + studentManagement.timMin());
 
-
     }
 }
