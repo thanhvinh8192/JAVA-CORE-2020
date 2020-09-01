@@ -10,8 +10,14 @@ public class Test {
         n = scanner.nextInt();
         Store[] stores = new Store[n];
         StoreManagement storeManagement = new StoreManagement(stores.length, stores);
-        for (Store st:stores) {
+        System.out.print("Cua hang ban nhieu dt nhat: " + storeManagement.BestQuantityStore());
+        System.out.print("Cua hang ban it dt nhat: " + storeManagement.LowestQuantityStore());
+        System.out.print("Cua hang co doanh thu cao nhat: " + storeManagement.BestSoldStore());
+        System.out.print("Cua hang co doanh thu thap nhat: " + storeManagement.LowestSoldStore());
+        System.out.print("So luong dien thoai co 5G: " + storeManagement.AllPhoneHave5G());
 
-        }
+
+
+
     }
 }
