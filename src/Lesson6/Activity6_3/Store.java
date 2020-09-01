@@ -11,6 +11,16 @@ public class Store {
 
     }
 
+    public String toString(){
+        return "Store Name: " + nameStore +
+                "Store Address: " + addressStore +
+                "Total Smartphones: " + totalSP +
+                "Smartphone info: " + phones;
+    }
+
+    /**
+     * Create store with Smartphones have in store
+     */
     public Store(String nameStore, String addressStore, int totalSP, SmartPhone[] phones) {
         this.nameStore = nameStore;
         this.addressStore = addressStore;
@@ -28,6 +38,7 @@ public class Store {
             boolean hasWifi = scanner.nextBoolean();
             System.out.print("OS: ");
             String oS = scanner.nextLine();
+            scanner.nextLine();
             System.out.print("Color: ");
             String color = scanner.nextLine();
             System.out.print("Memory: ");
@@ -36,11 +47,14 @@ public class Store {
             long price = scanner.nextLong();
             System.out.print("Total Sold: ");
             int totalSold = scanner.nextInt();
+            scanner.nextLine();
             phones[i] = new SmartPhone(brandName, hasBluetooth, has5G, hasWifi, oS, color, memory, price, totalSold);
         }
     }
 
-
+    /**
+     * Getter and Setter
+     */
     public String getNameStore() {
         return nameStore;
     }
@@ -74,9 +88,22 @@ public class Store {
     }
 
 
+    public void SmartphoneInfo(){
+        for (SmartPhone sm : phones) {
+            System.out.print("Brand Name: " + sm.getBrandName());
+            System.out.print("Bluetooth: " + sm.isHasBluetooth());
+            System.out.print("5G: " + sm.isHas5G());
+            System.out.print("Wifi: " + sm.isHasWifi());
+            System.out.print("OS: " + sm.getoS());
+            System.out.print("Color: " + sm.getColor());
+            System.out.print("Memory: " + sm.getMemory());
+            System.out.print("Price: " + sm.getPrice());
+            System.out.print("Total Sold: " + sm.getTotalSold());
+        }
+    }
 
     /**
-     * Dem tong so DT ban duoc
+     * Tong so DT ban duoc cua Store
      */
     public int tongDTSold(){
         int tong = 0;
@@ -87,12 +114,12 @@ public class Store {
     }
 
     /**
-     * Tinh tong doanh thu
+     * Tong doanh thu cua Store
      */
-    public long Tongdoanhthu(){
+    public long TongDoanhThu(){
         long tongDoanhThu = 0;
-        for (SmartPhone dt: phones) {
-            long doanhthu = dt.getTotalSold()*dt.getPrice();
+        for (SmartPhone phone: phones) {
+            long doanhthu = phone.getTotalSold()*phone.getPrice();
             tongDoanhThu = tongDoanhThu + doanhthu;
         }
         return tongDoanhThu;
@@ -108,23 +135,4 @@ public class Store {
         return count;
     }
 
-    public int countWifi(){
-        int count = 0;
-        for (SmartPhone sm: phones) {
-            if(sm.isHasWifi()== true){
-                count++;
-            }
-        }
-        return count;
-    }
-
-    public int countBluetooth(){
-        int count = 0;
-        for (SmartPhone sm: phones) {
-            if(sm.isHasBluetooth()){
-                count++;
-            }
-        }
-        return count;
-    }
 }

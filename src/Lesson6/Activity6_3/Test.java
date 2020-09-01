@@ -10,6 +10,8 @@ public class Test {
         n = scanner.nextInt();
         Store[] stores = new Store[n];
         StoreManagement storeManagement = new StoreManagement(stores.length, stores);
+        for (Store st:stores) {
 
+        }
     }
 }
