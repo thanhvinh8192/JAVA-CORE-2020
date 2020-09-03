@@ -7,15 +7,13 @@ public class Store {
     private int totalSP;
     private SmartPhone[] phones;
 
-    public  Store(){
-
-    }
+    public  Store(){ }
 
     public String toString(){
         return "Store Name: " + nameStore +
-                "Store Address: " + addressStore +
-                "Total Smartphones: " + totalSP +
-                "Smartphone info: " + phones;
+                "   Store Address: " + addressStore +
+                "   Total Smartphones: " + totalSP +
+                "   Smartphone info: " + phones.toString();
     }
 
     /**
@@ -88,19 +86,6 @@ public class Store {
     }
 
 
-    public void SmartphoneInfo(){
-        for (SmartPhone sm : phones) {
-            System.out.print("Brand Name: " + sm.getBrandName());
-            System.out.print("Bluetooth: " + sm.isHasBluetooth());
-            System.out.print("5G: " + sm.isHas5G());
-            System.out.print("Wifi: " + sm.isHasWifi());
-            System.out.print("OS: " + sm.getoS());
-            System.out.print("Color: " + sm.getColor());
-            System.out.print("Memory: " + sm.getMemory());
-            System.out.print("Price: " + sm.getPrice());
-            System.out.print("Total Sold: " + sm.getTotalSold());
-        }
-    }
 
     /**
      * Tong so DT ban duoc cua Store

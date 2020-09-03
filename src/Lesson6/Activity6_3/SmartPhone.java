@@ -8,7 +8,7 @@ public class SmartPhone {
     private long price;
     private int totalSold;
 
-    //Khoi tao
+    //Create Constructor
     public SmartPhone(String brandName, boolean hasBluetooth, boolean has5G, boolean hasWifi, String oS, String color, float memory, long price, int totalSold) {
         this.brandName = brandName;
         this.hasBluetooth = hasBluetooth;
@@ -95,14 +95,14 @@ public class SmartPhone {
     }
 
     public String toString(){
-        return "Brand: " + brandName +
-                "Bluetooth:  " + hasBluetooth +
-                "5G: " + has5G +
-                "Wifi: " + hasWifi +
-                "OS: " + oS +
-                "Memory: " + memory +
-                "Color: " + color +
-                "Price: " + price +
+        return "Brand: " + brandName + "\n" +
+                "Bluetooth:  " + hasBluetooth + "\n" +
+                "5G: " + has5G + "\n" +
+                "Wifi: " + hasWifi + "\n" +
+                "OS: " + oS + "\n" +
+                "Memory: " + memory + "\n" +
+                "Color: " + color + "\n" +
+                "Price: " + price + "\n" +
                 "TotalSold: " + totalSold;
     }
 

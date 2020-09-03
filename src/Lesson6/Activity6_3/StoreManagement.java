@@ -21,7 +21,7 @@ public class StoreManagement {
             String aDDStore = scanner.nextLine();
             System.out.print("Nhap so luong DT cua cua hang " + nameStore + ": ");
             int totalSP = scanner.nextInt();
-            System.out.print("Danh muc cac loai DT co trong cua hang " + nameStore + ": ");
+            System.out.print("Cac nhan hieu DT co trong cua hang (int) " + nameStore + ": ");
             int typeSmartphone = scanner.nextInt();
             scanner.nextLine();
             SmartPhone[] phones = new SmartPhone[typeSmartphone];
@@ -38,6 +38,7 @@ public class StoreManagement {
         for (Store st : stores) {
             if (bestQuantity<=st.tongDTSold()){
                 bestQuantity = st.tongDTSold();
+                store = st;
             }
         }
         return "Store: " + store.getNameStore() + "Address: " + store.getAddressStore();
@@ -49,9 +50,10 @@ public class StoreManagement {
         for (Store st : stores) {
             if (lowestQuantity>=st.tongDTSold()){
                 lowestQuantity = st.tongDTSold();
+                store = st;
             }
         }
-        return "Store: " + store.getNameStore() + "Address: " + store.getAddressStore();
+        return "Store: " + store.getNameStore() + "     Address: " + store.getAddressStore();
     }
     /**
      * Cua hang co doanh thu cao/thap nhat
@@ -62,9 +64,10 @@ public class StoreManagement {
         for (Store st : stores) {
             if (bestSold<=st.TongDoanhThu()){
                 bestSold = st.TongDoanhThu();
+                store = st;
             }
         }
-        return "Store: " + store.getNameStore() + "Address: " + store.getAddressStore();
+        return "Store: " + store.getNameStore() + "     Address: " + store.getAddressStore();
     }
 
     public String LowestSoldStore(){
@@ -73,9 +76,10 @@ public class StoreManagement {
         for (Store st : stores) {
             if (lowestSold>=st.TongDoanhThu()){
                 lowestSold = st.TongDoanhThu();
+                store = st;
             }
         }
-        return "Store: " + store.getNameStore() + "Address: " + store.getAddressStore();
+        return "Store: " + store.getNameStore() + "     Address: " + store.getAddressStore();
     }
 
     public int AllPhoneHave5G(){
@@ -86,5 +90,9 @@ public class StoreManagement {
         return totalPhone5G;
     }
 
-
+    public void getInfo(){
+        for (Store i : stores) {
+            System.out.println(i.toString());
+        }
+    }
 }
