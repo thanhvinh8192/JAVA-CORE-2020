@@ -4,11 +4,9 @@ public class Student {
     private  String name;
     public float gpa;
 
-    public  Student(){
+    //Create constructor
+    public  Student(){ }
 
-    }
-
-    //create contrustor
     public Student(String name, float gpa) {
         this.name = name;
         this.gpa = gpa;
