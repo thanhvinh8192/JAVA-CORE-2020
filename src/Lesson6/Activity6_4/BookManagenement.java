@@ -7,6 +7,7 @@ public class BookManagenement {
     private Book[] books;
 
     public BookManagenement(int totalBook) {
+        this.totalBook = totalBook;
         books = new Book[totalBook];
         Scanner input = new Scanner(System.in);
         for (int i=0; i<totalBook; i++) {
