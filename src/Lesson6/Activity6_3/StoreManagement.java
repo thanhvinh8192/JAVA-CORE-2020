@@ -41,11 +41,11 @@ public class StoreManagement {
                 store = st;
             }
         }
-        return "Store: " + store.getNameStore() + "Address: " + store.getAddressStore();
+        return "Store: " + store.getNameStore() + "     Address: " + store.getAddressStore();
     }
 
     public String LowestQuantityStore(){
-        int lowestQuantity = 0;
+        int lowestQuantity = stores[0].tongDTSold();
         Store store = new Store();
         for (Store st : stores) {
             if (lowestQuantity>=st.tongDTSold()){
@@ -71,7 +71,7 @@ public class StoreManagement {
     }
 
     public String LowestSoldStore(){
-        long lowestSold = 0;
+        long lowestSold = stores[0].TongDoanhThu();
         Store store = new Store();
         for (Store st : stores) {
             if (lowestSold>=st.TongDoanhThu()){
@@ -93,6 +93,12 @@ public class StoreManagement {
     public void getInfo(){
         for (Store i : stores) {
             System.out.println(i.toString());
+            SmartPhone[] arrSmartphone = i.phones;
+            String phoneinfo = "";
+            for (SmartPhone j: arrSmartphone) {
+                phoneinfo = phoneinfo +  j.getBrandName() + ", ";
+            }
+            System.out.println("Danh sách các hãng điện thoại có trong cửa hàng: " + phoneinfo);
         }
     }
 }

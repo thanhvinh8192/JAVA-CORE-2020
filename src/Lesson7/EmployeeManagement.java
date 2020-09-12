@@ -54,4 +54,33 @@ public class EmployeeManagement {
         this.employee = employee;
     }
 
+    public double getTotalSalary(){
+        double totalSalary = 0;
+        for (Employee nv: employee) {
+            if(nv instanceof FullTimeEmployee) {
+                FullTimeEmployee fullTimeEmployee = (FullTimeEmployee) nv;
+                totalSalary = fullTimeEmployee.TotalSalary();
+            }
+            else {
+                PartTimeEmployee partTimeEmployee = (PartTimeEmployee) nv;
+                totalSalary = partTimeEmployee.TotalSalary();
+            }
+        }
+        return totalSalary;
+    }
+
+    public void PrintInfo(){
+        for (Employee nv : employee) {
+            if(nv instanceof FullTimeEmployee){
+                FullTimeEmployee fullTimeEmployee = (FullTimeEmployee) nv;
+                System.out.println(fullTimeEmployee.toString());
+            }
+            else {
+                PartTimeEmployee partTimeEmployee = (PartTimeEmployee) nv;
+                System.out.println(partTimeEmployee.toString());
+            }
+        }
+    }
+
+
 }

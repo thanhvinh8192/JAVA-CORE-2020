@@ -5,15 +5,14 @@ import java.util.Scanner;
 public class Store {
     private String nameStore, addressStore;
     private int totalSP;
-    private SmartPhone[] phones;
+    public SmartPhone[] phones;
 
     public  Store(){ }
 
     public String toString(){
         return "Store Name: " + nameStore +
                 "   Store Address: " + addressStore +
-                "   Total Smartphones: " + totalSP +
-                "   Smartphone info: " + phones.toString();
+                "   Total Smartphones: " + totalSP;
     }
 
     /**

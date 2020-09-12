@@ -9,6 +9,11 @@ public class SmartPhone {
     private int totalSold;
 
     //Create Constructor
+
+
+    public SmartPhone() {
+    }
+
     public SmartPhone(String brandName, boolean hasBluetooth, boolean has5G, boolean hasWifi, String oS, String color, float memory, long price, int totalSold) {
         this.brandName = brandName;
         this.hasBluetooth = hasBluetooth;
@@ -94,7 +99,7 @@ public class SmartPhone {
         this.totalSold = totalSold;
     }
 
-    public String toString(){
+    /*public String toString(){
         return "Brand: " + brandName + "\n" +
                 "Bluetooth:  " + hasBluetooth + "\n" +
                 "5G: " + has5G + "\n" +
@@ -104,7 +109,7 @@ public class SmartPhone {
                 "Color: " + color + "\n" +
                 "Price: " + price + "\n" +
                 "TotalSold: " + totalSold;
-    }
+    }*/
 
 
 }

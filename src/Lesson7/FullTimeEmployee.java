@@ -5,14 +5,27 @@ public class FullTimeEmployee extends Employee {
     private boolean isManager;
     private int overTimeDay;
 
-    @Override
-    public String toString(){
-        return
-    }
+
     public FullTimeEmployee(String nameEmployee, String idEmployee, boolean isManager, int overTimeDay) {
         super(nameEmployee, idEmployee);
         this.isManager = isManager;
         this.overTimeDay = overTimeDay;
+        if(isManager()){
+            baseSalary = 2000000;
+        }
+        else {
+            baseSalary = 1000000;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "FullTimeEmployee{" +
+                "baseSalary=" + baseSalary +
+                ", isManager=" + isManager +
+                ", overTimeDay=" + overTimeDay +
+                ", Total Salary=" + TotalSalary() +
+                '}';
     }
 
     public double getBaseSalary() {
@@ -20,13 +33,7 @@ public class FullTimeEmployee extends Employee {
     }
 
     public void setBaseSalary(double baseSalary) {
-        this.baseSalary = baseSalary;
-        if (this.isManager()){
-            baseSalary = 20000000d;
-        }
-        else {
-            baseSalary = 10000000d;
-        }
+       this.baseSalary = baseSalary;
     }
 
     public boolean isManager() {
@@ -43,5 +50,19 @@ public class FullTimeEmployee extends Employee {
 
     public void setOverTimeDay(int overTimeDay) {
         this.overTimeDay = overTimeDay;
+    }
+
+    /**
+     * Phuong thuc tinh luong tong va luong OT cua nhan vien Fultime
+     */
+
+    public double OTSalary(){
+        double otSalary = getOverTimeDay() * 800000;
+        return otSalary;
+    }
+
+    public double TotalSalary(){
+        double totalSalary = getBaseSalary() + OTSalary();
+        return totalSalary;
     }
 }
