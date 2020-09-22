@@ -72,7 +72,7 @@ public class EmployeeManagement {
     public void PrintInfo(){
         for (Employee nv : employee) {
             if(nv instanceof FullTimeEmployee){
-                FullTimeEmployee fullTimeEmployee = (FullTimeEmployee) nv;
+                FullTimeEmployee fullTimeEmployee = (FullTimeEmployee) nv; //ep kieu du lieu
                 System.out.println(fullTimeEmployee.toString());
             }
             else {
